@@ -21,6 +21,7 @@ pipeline {
                     """
                 }
             }
+        }
             
         stage("create docker image") {
             steps {
@@ -39,5 +40,4 @@ pipeline {
         }
         }
     }
-}
 }
