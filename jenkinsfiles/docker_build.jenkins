@@ -22,7 +22,6 @@ pipeline {
                 }
             }
         }
-            
         stage("create docker image") {
             steps {
                 echo " ============== start building image =================="
@@ -30,7 +29,8 @@ pipeline {
                 	sh 'docker build -t borisbrew/toolbox:latest . '
                 }
             }
-            stage("docker push") {
+        }
+        stage("docker push") {
             steps {
                 echo " ============== start pushing image =================="
                 sh '''
@@ -38,6 +38,6 @@ pipeline {
                 '''
             }
         }
-        }
     }
 }
+
